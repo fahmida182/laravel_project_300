@@ -1,23 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Salt Admin</title>
+  <title>My Project </title>
   <!-- plugins:css -->
-  <link rel="stylesheet" href="node_modules/mdi/css/materialdesignicons.min.css">
-  <link rel="stylesheet" href="node_modules/perfect-scrollbar/dist/css/perfect-scrollbar.min.css">
+  <link rel="stylesheet" href="{{asset('node_modules/mdi/css/materialdesignicons.min.css')}}">
+  <link rel="stylesheet" href="{{asset('node_modules/perfect-scrollbar/dist/css/perfect-scrollbar.min.css')}}">
   <!-- endinject -->
   <!-- plugin css for this page -->
-  <link rel="stylesheet" href="node_modules/rickshaw/rickshaw.min.css" />
-  <link rel="stylesheet" href="bower_components/chartist/dist/chartist.min.css" />
+  <link rel="stylesheet" href="{{asset('node_modules/rickshaw/rickshaw.min.css')}}" />
+  <link rel="stylesheet" href="{{asset('bower_components/chartist/dist/chartist.min.css')}}" />
   <!-- End plugin css for this page -->
   <!-- inject:css -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="{{asset('css/style.css')}}">
   <!-- endinject -->
   <link rel="shortcut icon" href="images/favicon.html" />
 </head>
@@ -265,34 +262,49 @@
   <!-- container-scroller -->
 
   <!-- plugins:js -->
-  <script src="node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="node_modules/perfect-scrollbar/dist/js/perfect-scrollbar.jquery.min.js"></script>
+  <script src="{{asset('node_modules/jquery/dist/jquery.min.js')}}"></script>
+  <script src="{{asset('node_modules/popper.js/dist/umd/popper.min.js')}}"></script>
+  <script src="{{asset('node_modules/bootstrap/dist/js/bootstrap.min.js')}}"></script>
+  <script src="{{asset('node_modules/perfect-scrollbar/dist/js/perfect-scrollbar.jquery.min.js')}}"></script>
   <!-- endinject -->
   <!-- Plugin js for this page-->
-  <script src="node_modules/flot/jquery.flot.js"></script>
-  <script src="node_modules/flot/jquery.flot.resize.js"></script>
-  <script src="node_modules/flot/jquery.flot.categories.js"></script>
-  <script src="node_modules/flot/jquery.flot.pie.js"></script>
-  <script src="node_modules/rickshaw/vendor/d3.v3.js"></script>
-  <script src="node_modules/rickshaw/rickshaw.min.js"></script>
-  <script src="bower_components/chartist/dist/chartist.min.js"></script>
-  <script src="node_modules/chartist-plugin-legend/chartist-plugin-legend.js"></script>
-  <script src="node_modules/chart.js/dist/Chart.min.js"></script>
-  <script src="node_modules/jquery-sparkline/jquery.sparkline.min.js"></script>
+  <script src="{{asset('node_modules/flot/jquery.flot.js')}}"></script>
+  <script src="{{asset('node_modules/flot/jquery.flot.resize.js')}}"></script>
+  <script src="{{asset('node_modules/flot/jquery.flot.categories.js')}}"></script>
+  <script src="{{asset('node_modules/flot/jquery.flot.pie.js')}}"></script>
+  <script src="{{asset('node_modules/rickshaw/vendor/d3.v3.js')}}"></script>
+  <script src="{{asset('node_modules/rickshaw/rickshaw.min.js')}}"></script>
+  <script src="bower_components/chartist/dist/chartist.min.js')}}"></script>
+  <script src="{{asset('node_modules/chartist-plugin-legend/chartist-plugin-legend.js')}}"></script>
+  <script src="{{asset('node_modules/chart.js/dist/Chart.min.js')}}"></script>
+  <script src="{{asset('node_modules/jquery-sparkline/jquery.sparkline.min.js')}}"></script>
   <!-- End plugin js for this page-->
+  <script src="{{asset('node_modules/datatables.net/js/jquery.dataTables.js')}}"></script>
+  <script src="{{asset('node_modules/datatables.net-bs4/js/dataTables.bootstrap4.js')}}"></script>
+  <script src="{{asset('js/data-table.js')}}"></script>
   <!-- inject:js -->
-  <script src="js/off-canvas.js"></script>
-  <script src="js/hoverable-collapse.js"></script>
-  <script src="js/misc.js"></script>
-  <script src="js/settings.js"></script>
+  <script src="{{asset('js/off-canvas.js')}}"></script>
+  <script src="{{asset('js/hoverable-collapse.js')}}"></script>
+  <script src="{{asset('js/misc.js')}}"></script>
+  <script src="{{asset('js/settings.js')}}"></script>
   <!-- endinject -->
   <!-- Custom js for this page-->
-  <script src="js/dashboard_1.js"></script>
+  <script src="{{asset('js/dashboard_1.js')}}"></script>
+  <script type="text/javascript" src="{{asset('https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js')}}"></script>
   <!-- End custom js for this page-->
+  <script>
+    $(document).on("click","#delete", function(e){
+  e.preventDefault();
+  var link = $(this).attr("href");
+   bootbox.confirm("Are you want to delete?", function(confirmed) {
+    if (confirmed) {
+      window.location.href = link;
+    };
+  });
+});
+</script>
 </body>
 
 
-<!-- Mirrored from www.urbanui.com/salt/jquery/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Dec 2017 12:32:50 GMT -->
+
 </html>

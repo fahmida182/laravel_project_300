@@ -29,7 +29,11 @@ Route::get('/setting','AdminController@setting');
 
 //addstudent
 Route::get('/addstudent','AddstudentsController@addstudent');
-Route::get('/save_student','AddstudentsController@savestudent');
+Route::post('/save_student','AddstudentsController@savestudent');
+Route::get('/student_delete/{student_id}','AllstudentsController@studentdelete');
+Route::get('/studentview','AllstudentsController@studentview');
+
+
 
 //allstudent
 Route::get('/allstudent','AllstudentsController@allstudent');
