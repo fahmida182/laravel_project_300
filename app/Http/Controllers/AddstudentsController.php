@@ -74,5 +74,14 @@ public function savestudent(Request $request){
          return Redirect::to('/addstudent'); 
 
 
+
+
+}
+
+
+
+
+public function studentprofile(){
+  return view("student.student_view");
 }
 }

@@ -23,6 +23,15 @@ Route::get('/backend', function () {
 
 //adminlogin
 Route::post('/adminlogin','AdminController@login_dashboard');
+Route::post('/studentlogin','AdminController@student_login_dashboard');
+
+
+Route::get('/student_dashboard','AdminController@student_dashboard');
+
+
+Route::get('/student_profile','AddstudentsController@studentprofile');
+
+
 Route::get('/admin_dashboard','AdminController@admin_dashboard');
 Route::get('/viewprofile','AdminController@viewprofile');
 Route::get('/setting','AdminController@setting');
@@ -31,7 +40,11 @@ Route::get('/setting','AdminController@setting');
 Route::get('/addstudent','AddstudentsController@addstudent');
 Route::post('/save_student','AddstudentsController@savestudent');
 Route::get('/student_delete/{student_id}','AllstudentsController@studentdelete');
-Route::get('/studentview','AllstudentsController@studentview');
+
+Route::get('/student_view/{student_id}','AllstudentsController@studentview');
+Route::get('/student_edit/{student_id}','AllstudentsController@studentedit');
+Route::post('/update_student/{student_id}','AllstudentsController@studentupdate');
+
 
 
 
@@ -47,3 +60,5 @@ Route::get('/llb','LLBController@llb');
 Route::get('/mba','MBAController@mba');
 Route::get('/english','EnglishController@english');
 Route::get('/allteacher','AllteachersController@allteacher');
+Route::get('/addteacher','AllteachersController@addteacher');
+Route::post('/save_teacher','AllteachersController@saveteacher');

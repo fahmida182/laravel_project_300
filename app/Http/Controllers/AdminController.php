@@ -16,6 +16,13 @@ class AdminController extends Controller
   public function admin_dashboard(){
          return view("admin.dashboard");
 	}
+	//student login part
+	
+	public function student_dashboard(){
+		return view("student.dashboard");
+   }
+
+
 
 	//view profile
 	
@@ -39,7 +46,7 @@ class AdminController extends Controller
 
 
 
-//logindeshboard for admin
+// Admin login deshboard 
 
     public function login_dashboard(Request $request) {
 		//return view('admin.dashboard');
@@ -65,6 +72,54 @@ class AdminController extends Controller
    			Session::put('exception','Email or Password invalid');
    			/* This session is used for when email or password invalid and then show this test at */
    			return Redirect::to('/backend'); 
+   		}
+
+
+
+     /*
+       $data = array();
+       $data['contact_name']=$request->contact_name;
+       $data['contact_number']=$request->contact_number;
+ 
+
+       DB::table('tbl_contact')->insert($data); 
+
+       Session::put('message','Contact Added Successfully!!');  
+        return Redirect::to('/adminlogin'); 
+     */
+
+
+       }
+
+
+	   // student login deshboard 
+
+	   public function student_login_dashboard(Request $request) {
+		
+		
+		//return view('student.dashboard');
+		 $email=$request->student_email;
+
+   		$password=($request->student_password);
+   		$result=DB::table('student_tbl')
+   		->where('student_email',$email)
+   		->where('student_password',$password)
+   		->first();
+
+      // echo "</pre>";
+   		 //print_r($result);
+
+   		if ($result) {
+
+
+   		Session::put('student_email',$result->student_email);
+      Session::put('student_id',$result->student_id);
+      return Redirect::to('/student_dashboard'); 
+   		}
+   		else {
+   			Session::put('exception','Email or Password invalid');
+   			/* This session is used for when email or password invalid and then show this test at */
+   			return Redirect::to('/'); 
    		}
 
 
