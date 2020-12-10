@@ -1,3 +1,13 @@
+@php
+  $student_id=Session::get('student_id');
+      $student_info=DB::table('student_tbl')
+                   ->where('student_id',$student_id)
+                   ->first();
+
+@endphp
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +49,7 @@
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar navbar-light col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper">
-        <a class="navbar-brand brand-logo" href="{{URL::to('')}}"><img src="" alt="logo"></a>
+        <a class="navbar-brand brand-logo" href="{{URL::to('/student_dashboard')}}">S-A-S</a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center">
         <button class="navbar-toggler navbar-toggler align-self-center mr-2" type="button" data-toggle="minimize">
@@ -76,11 +86,12 @@
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
           <div class="user-info">
             <div class="profile">
-              <img src="http://via.placeholder.com/47x47" alt="">
+              <img src="{{URL::to($student_info->student_image)}}" alt="">
             </div>
             <div class="details">
-              <p class="user-name">Student Admission  System</p>
-              <p class="designation">laravel Project</p>
+              <p class="user-name">{{strtoupper($student_info->student_name)}}</p>
+              <p class="user-name">{{strtoupper($student_info->student_studentid)}}</p>
+            
             </div>
           </div>
           <ul class="nav">

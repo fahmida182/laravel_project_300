@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="{{asset('bower_components/chartist/dist/chartist.min.css')}}" />
   <!-- End plugin css for this page -->
   <!-- inject:css -->
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
   <link rel="stylesheet" href="{{asset('css/style.css')}}">
   <!-- endinject -->
   <link rel="shortcut icon" href="images/favicon.html" />
@@ -39,7 +41,7 @@
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar navbar-light col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
       <div class="text-center navbar-brand-wrapper">
-        <a class="navbar-brand brand-logo" href="{{URL::to('/admin_dashboard')}}"><img src="" alt="logo"></a>
+        <a class="navbar-brand brand-logo" href="{{URL::to('/admin_dashboard')}}">S-A-S</a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center">
         <button class="navbar-toggler navbar-toggler align-self-center mr-2" type="button" data-toggle="minimize">
@@ -66,7 +68,7 @@
         <ul class="navbar-nav ml-lg-auto">
           <li class="nav-item dropdown">
             <a class="nav-link count-indicator" id="MailDropdown" href="#" data-toggle="dropdown">
-              <i class="mdi mdi-message-outline"></i>
+            <i class="mdi mdi-message-outline"></i>
               <span class="count bg-danger">4</span>
             </a>
             <div class="dropdown-menu navbar-dropdown mail-notification" aria-labelledby="MailDropdown">
@@ -82,7 +84,7 @@
               </a>
               <a class="dropdown-item" href="{{URL::to('/setting')}}">
                 <div class="sender-img">
-                  <img src="http://via.placeholder.com/47x47" alt="">
+                  <img src="../images/images.jpg" alt="">
                 
                 </div>
                 <div class="sender">
@@ -115,7 +117,7 @@
         <nav class="sidebar sidebar-offcanvas" id="sidebar">
           <div class="user-info">
             <div class="profile">
-              <img src="http://via.placeholder.com/47x47" alt="">
+              <img src="../images/images.jpg" alt="">
             </div>
             <div class="details">
               <p class="user-name">Student Admission  System</p>
@@ -140,24 +142,7 @@
                 <span class="badge badge-danger badge-pill ml-auto">New</span>
            </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#layoutsSubmenu" aria-expanded="false" aria-controls="layoutsSubmenu">
-                <i class="mdi mdi-arrow-expand-all menu-icon"></i>
-                <span class="menu-title">Student Information</span>
-                <i class="mdi mdi-chevron-down menu-arrow"></i>
-              </a>
-              <div class="collapse" id="layoutsSubmenu">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item">
-                 <a class="nav-link" href="{{URL::to('/registationfee')}}">Registation Fee</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="{{URL::to('/tutionfee')}}">Tution Fee</a>
-                  </li>
-        
-                </ul>
-              </div>
-            </li>
+           
             <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#sidebar_layouts" aria-expanded="false" aria-controls="sidebar_layouts">
                 <i class="mdi mdi-format-list-bulleted menu-icon"></i>

@@ -82,6 +82,26 @@ public function savestudent(Request $request){
 
 
 public function studentprofile(){
-  return view("student.student_view");
+
+
+  //return view("student.student_view");
+
+  $student_id=Session::get('student_id');
+    $student_profile=DB::table('student_tbl')
+          ->select('*')
+          ->where('student_id',$student_id)
+          ->first();
+
+//echo "</pre>";
+//print_r($student_profile);
+
+//echo "</pre>";
+
+$manage_student=view('student.student_view')
+      ->with('student_profile',$student_profile); 
+
+return view('student_layout')
+   ->with('student_view',$manage_student);
+
 }
 }

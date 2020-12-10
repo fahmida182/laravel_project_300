@@ -28,6 +28,11 @@ class AllstudentsController extends Controller
 
 
 
+
+
+
+
+
 //delete method
 
     public function studentdelete($student_id){
@@ -40,6 +45,11 @@ class AllstudentsController extends Controller
          return Redirect::to('/allstudent');
 
 }
+
+
+
+
+
 
 
 //student view information
@@ -68,6 +78,10 @@ public function studentview($student_id){
 
 
 
+
+
+
+
 //student edit part
 
 
@@ -91,6 +105,10 @@ public function studentedit($student_id){
                   ->with('student_edit',$manage_view_student);
 
 }
+
+
+
+
 
 
 //student update information
@@ -121,5 +139,38 @@ public function studentupdate(Request $request,$student_id){
         return Redirect::to('/allstudent'); 
 
 }
+
+
+
+
+
+
+
+
+//student own  profile update part
+
+
+public function studentprofileupdate(Request $request){
+    $student_id=Session::get('student_id');
+    $data=array();
+    $data['student_email']=$request->student_email ;
+    $data['student_phone']=$request->student_phone ;
+    $data['student_address']=$request->student_address;
+    $data['student_password']=$request->student_password;
+    
+
+
+
+DB::table('student_tbl')
+    ->where('student_id',$student_id)
+    ->update($data);
+
+
+Session::put('exception','Student updates sucessfully');
+
+  return Redirect::to('/student_setting'); 
+
+}
+
 
 }
