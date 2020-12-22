@@ -24,6 +24,11 @@ class AllteachersController extends Controller
        // return view("admin.allteacher");
     }
 
+
+
+
+
+
     public function addteacher(){
         return view("admin.add_teacher");
     }
@@ -85,4 +90,24 @@ return Redirect::to('/addteacher');
 
 
 }
+
+
+
+
+//delete method
+
+public function teachersdelete($teachers_id){
+
+        
+    DB::table('teachers_tbl')
+       ->where('teachers_id',$teachers_id)
+       ->delete();
+
+       return Redirect::to('/allteachers');
+
+}
+
+
+
+
 }

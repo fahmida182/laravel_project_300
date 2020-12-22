@@ -17,7 +17,7 @@ Route::get('/student_logout','AdminController@student_logout');
 Route::get('/', function () {
     return view('student_login');
 });
-Route::get('/backend', function () {
+Route::get('/admin', function () {
     return view('admin.admin_login');
 });
 
@@ -54,6 +54,8 @@ Route::post('/student_profile_update','AllstudentsController@studentprofileupdat
 
 
 
+Route::get('/forgot_password','Forgotpasword@forgotpassword');
+
 
 //allstudent
 Route::get('/allstudent','AllstudentsController@allstudent');
@@ -66,6 +68,18 @@ Route::get('/eee','EEEController@eee');
 Route::get('/llb','LLBController@llb');
 Route::get('/mba','MBAController@mba');
 Route::get('/english','EnglishController@english');
+
+
+
+
+
+//teacher
+
+
 Route::get('/allteacher','AllteachersController@allteacher');
 Route::get('/addteacher','AllteachersController@addteacher');
 Route::post('/save_teacher','AllteachersController@saveteacher');
+Route::get('/teachers_delete/{teachers_id}','AllteachersController@teachersdelete');
+
+
+

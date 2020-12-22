@@ -47,28 +47,12 @@
         <button class="navbar-toggler navbar-toggler align-self-center mr-2" type="button" data-toggle="minimize">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="btn-group d-none d-sm-block">
-          <button type="button" class="btn btn-secondary btn-sm text-muted border-0 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
-          </div>
-        </div>
-        <form class="form-inline mt-2 ml-3 mt-md-0 d-none d-sm-block">
-          <div class="input-group solid">
-            <span class="input-group-addon"><i class="mdi mdi-magnify"></i></span>
-            <input type="text" class="form-control">
-          </div>
-        </form>
+       
+        
         <ul class="navbar-nav ml-lg-auto">
           <li class="nav-item dropdown">
             <a class="nav-link count-indicator" id="MailDropdown" href="#" data-toggle="dropdown">
-            <i class="mdi mdi-message-outline"></i>
+            <i class="mdi mdi-account-circle"></i>
               <span class="count bg-danger">4</span>
             </a>
             <div class="dropdown-menu navbar-dropdown mail-notification" aria-labelledby="MailDropdown">
@@ -131,13 +115,13 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{URL::to('/allstudent')}}">
-                <i class="mdi mdi-gauge menu-icon"></i>
+                <i class="mdi mdi-account"></i>
                 <span class="menu-title"> All Student</span>
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{URL::to('/addstudent')}}">
-                <i class="mdi mdi-puzzle menu-icon"></i>
+                <i class="mdi mdi-account-plus"></i>
                 <span class="menu-title">Add Student</span>
                 <span class="badge badge-danger badge-pill ml-auto">New</span>
            </a>
@@ -196,7 +180,7 @@
         
             <li class="nav-item">
               <a class="nav-link" data-toggle="collapse" href="#formsSubmenu" aria-expanded="false" aria-controls="formsSubmenu">
-                <i class="mdi mdi-clipboard-outline menu-icon"></i>
+                <i class="mdi mdi-account-multiple-outline"></i>
                 <span class="menu-title">Teachers</span>
                 <i class="mdi mdi-chevron-down menu-arrow"></i>
               </a>
@@ -235,7 +219,7 @@
         <footer class="footer">
           <div class="container-fluid clearfix">
             <span class="float-right">
-                <a href="#">Project300</a> &copy; 2017
+                <a href="#">Project300</a> &copy; 2020
             </span>
           </div>
         </footer>

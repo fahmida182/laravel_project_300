@@ -48,10 +48,24 @@ class AdminController extends Controller
 	 //setting update password
 	 public function setting(){
 
-		
+		//return view("admin.setting");
 
-
-		return view("admin.setting");
+		$admin_id=Session::get('admin_id');
+		$admin_description_view=DB::table('admin_tbl')
+					   ->select('*')
+					   ->where('admin_id',$admin_id)
+					   ->first();
+	
+					//echo "</pre>";
+				   // print_r($admin_description_view);
+	
+				   // echo "</pre>";
+	
+			 $manage_view_admin=view('admin.setting')
+					   ->with('admin_description_profile',$admin_description_view); 
+				  
+			   return view('layout')
+					  ->with('admin.setting',$manage_view_admin);
 	}
 
 
@@ -92,7 +106,7 @@ class AdminController extends Controller
 	Session::put('admin_name',null);
 	Session::put('admin_id',null);
 
-	return Redirect::to('/backend');
+	return Redirect::to('/admin');
 	}
 
 
@@ -141,7 +155,7 @@ class AdminController extends Controller
    		else {
    			Session::put('exception','Email or Password invalid');
    			/* This session is used for when email or password invalid and then show this test at */
-   			return Redirect::to('/backend'); 
+   			return Redirect::to('/admin'); 
    		}
 
 

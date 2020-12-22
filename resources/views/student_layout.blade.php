@@ -52,27 +52,11 @@
         <a class="navbar-brand brand-logo" href="{{URL::to('/student_dashboard')}}">S-A-S</a>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-center">
-        <button class="navbar-toggler navbar-toggler align-self-center mr-2" type="button" data-toggle="minimize">
-          <span class="navbar-toggler-icon"></span>
+       
+        <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="btn-group d-none d-sm-block">
-          <button type="button" class="btn btn-secondary btn-sm text-muted border-0 dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
-          </button>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Separated link</a>
-          </div>
-        </div>
-        <form class="form-inline mt-2 ml-3 mt-md-0 d-none d-sm-block">
-          <div class="input-group solid">
-            <span class="input-group-addon"><i class="mdi mdi-magnify"></i></span>
-            <input type="text" class="form-control">
-          </div>
-        </form>
+       
+       
         
         <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
           <span class="navbar-toggler-icon"></span>
@@ -101,11 +85,11 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{URL::to('/student_profile')}}">
-                <i class="mdi mdi-gauge menu-icon"></i>
+                <i class="mdi mdi-account-settings"></i>
                 <span class="menu-title"> Profile</span>
               </a>
               <a class="nav-link" href="{{URL::to('/student_setting')}}">
-                <i class="mdi mdi-gauge menu-icon"></i>
+               <i class="mdi mdi-settings"></i>
                 <span class="menu-title"> Setting</span>
               </a>
               <a class="nav-link" href="{{URL::to('/student_logout')}}">

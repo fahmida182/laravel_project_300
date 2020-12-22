@@ -47,8 +47,8 @@
             <div class="col-sm-6 col-md-3 grid-margin">
               <div class="card">
                 <div class="card-body">
-                  <h2 class="card-title">Courses</h2>
-                  <p style="font-family:cursive; font-size:30px; font-weight:bold text-align:center;">{{$student}}</p>
+                  <h2 class="card-title">Regestation Fee</h2>
+                  <p style="font-family:cursive; font-size:20px; font-weight:bold text-align:center;">6000</p>
                 </div>
                 <div class="dashboard-chart-card-container">
                   <div id="dashboard-card-chart-4" class="card-float-chart"></div>

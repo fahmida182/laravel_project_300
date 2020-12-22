@@ -4,7 +4,7 @@
 <div class="col-12 col-lg-6 grid-margin">
                   <div class="card">
                       <div class="card-body">
-                          <h2 class="card-title">Update Student Information</h2>
+                          <h2 class="card-title">Edit Student Information</h2>
                                     <p class="alert-success">
                               <?php
                               $exception = Session::get('exception');

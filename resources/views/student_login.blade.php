@@ -50,19 +50,16 @@
                 </div>
                 <div class="form-group d-flex align-items-center justify-content-between">
                   <div class="icheck-square">
-                    <input tabindex="1" type="checkbox" id="remember">
-                    <label for="remember">Remember me</label>
+                   
+                    
                   </div>
-                  <a href="#" class="forgot-pass">Forgot password</a>
+                  <a href="URL::to{{('/forgot_password')}}" class="forgot-pass">Forgot password</a>
                 </div>
                 <div class="text-center">
                   <button type="submit" class="btn btn-primary btn-block enter-btn">Login</button>
                 </div>
                  </form>
-                <div class="d-flex justify-content-center mb-4">
-                  <a href="#" class="facebook-login btn btn-facebook mr-2">Facebook</a>
-                  <a href="#" class="google-login btn btn-google">Google+</a>
-                </div>
+                
                 <small class="text-center d-block">Don't have an Account?<a href="#"> Sign Up</a></small>
              
             </div>
